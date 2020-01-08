@@ -4,8 +4,10 @@ import Search from '../Search/Search.js';
 
 function headerContainer() {
   return (
-    <div>
+    <div className="row">
       <Search />
+      <button className="btn btn-outline-secondary m-3">Delete selected</button>
+      <button className="btn btn-outline-secondary m-3">Download</button>
     </div>
   );
 }
