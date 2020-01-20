@@ -4,10 +4,10 @@ import Search from '../Search/Search.js';
 
 function headerContainer() {
   return (
-    <div className="row">
+    <div className="row m-0 justify-content-center">
       <Search />
-      <button className="btn btn-outline-secondary m-3">Delete selected</button>
-      <button className="btn btn-outline-secondary m-3">Download</button>
+      <button className="btn btn-outline-secondary m-3 col-test-3">Delete selected</button>
+      <button className="btn btn-outline-secondary m-3 col-test-3">Download</button>
     </div>
   );
 }

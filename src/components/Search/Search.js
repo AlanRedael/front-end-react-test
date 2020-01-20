@@ -3,7 +3,7 @@ import './Search.css'
 
 function Search() {
   return (
-    <div>
+    <div className="col-test-3">
       <div className="form-group flex-wrap: wrap">
         <label>Filter by name</label>
         <div class="form-group has-search">
