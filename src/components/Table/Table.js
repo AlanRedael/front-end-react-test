@@ -36,12 +36,10 @@ export default class Table extends React.Component {
 
   deleteListItem(e) {
     let key = e.target.id
-    console.log(typeof key)
     let temp = this.state.users.filter(
       // eslint-disable-next-line eqeqeq
       user => user.id != key
     )
-    console.log("temp", temp)
     this.setState({
       users: temp
     })
