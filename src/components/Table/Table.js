@@ -28,7 +28,9 @@ export default class Table extends React.Component {
           <input type="checkbox" id={item.id} name="option1" value="something" />
         </td>
         <td>{item.firstName} {item.lastName}</td>
-        <td><span type="button" id={item.id} className="btn p-0" onClick={(e) => this.deleteListItem(e)}>Delete</span> | <span type="button" className="btn p-0">Show</span></td>
+        <td>
+          <span type="button" id={item.id} className="btn p-0" onClick={(e) => this.deleteListItem(e)}>Delete</span> | <span type="button" className="btn p-0">Show</span>
+        </td>
       </tr>
     )
     return listItens
@@ -39,6 +41,17 @@ export default class Table extends React.Component {
     let temp = this.state.users.filter(
       // eslint-disable-next-line eqeqeq
       user => user.id != key
+    )
+    this.setState({
+      users: temp
+    })
+    this.listItens()
+  }
+
+  searchListItem(e) {
+    let substr = e.target;
+    let temp = this.state.users.filter(
+      user => user.name.includes(substr) || user.name.includes(substr)
     )
     this.setState({
       users: temp
